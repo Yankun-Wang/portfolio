@@ -96,7 +96,7 @@
 				</div>
 			</div>
 
-			<div class="fh5co-cover row-bottom-padded-md" style="background-image: url(error_handling/error_intro.png)">
+			<div class="fh5co-cover row-bottom-padded-md" style="background-image: url(error_handling/cover-white.png)">
 			</div>
 
 			<div class="container" id="fh5co-project-overview fh5co-project">
@@ -130,17 +130,103 @@
 				</div>
 			</div>
 
+			<div style="padding-bottom: 0px;">
+				<img id="img_center" width="100%;"src="error_handling/design_process.png" class="img-responsive">
+			</div> 
 
+			<div class="container" id="fh5co-project">
+				<div class="row">
+					<div class="col-md-10 col-md-offset-1">
+						<h5>Problems to be solved</h5>
+						<h6 style="line-height:1.5">Problem 1: The current validation summary has a low usage because it isn’t helpful. </h6>
+						<p>The current form validation summary shows up after the form is returned from server-side validation. It locates on the top of the form and the users need to click the “View all errors and warnings” link to view a full list of items. Research shows that this section has low usage because users either don’t expand the list or scroll up and down to see the list.</p>
+						<img style="padding-bottom:20px;" id="img_center" width="100%;"src="error_handling/current_summary.png" class="img-responsive">
+						<h6 style="color:#0854A1">Hypothesis</h6>
+						<p>TWe redesign the validation summary so that it can provide more help when the users are correcting errors. </p>
+					</div>
+				</div>
+
+				<div class="row" id="fh5co-project">
+					<div class="col-md-10 col-md-offset-1 col-md-5 col-lg-5" style="padding-top:0px;" >
+						<h6 style="line-height:1.5">Problem 2: Users have trouble keeping track of the correction progress.</h3>
+						<p>The form page is overwhelmed with multiple errors. Users need to consistently scroll up and down to locate the error fields. Users couldn’t know whether they correct the errors or not until they resubmit the form. </p>
+						<h6 style="color:#0854A1">Hypothesis</h6>
+						<p>We design a method to keep users informed as they refilling the fields so that they know what else they need to fix. Error messages should go away as errors got fixed. </p>	
+					</div>
+					<div class="col-md-10 col-md-offset-1 col-md-5 col-lg-5">
+						<img src="error_handling/before.png" style="padding-left: 0px; padding-bottom:0;" width="100%;" id="img_center"  class="img-responsive">
+					</div>	
+				</div>
+
+				<div class="row" id="fh5co-project">
+					<div class="col-md-10 col-md-offset-1 col-md-6 col-lg-6">
+						<img src="error_handling/ca.png" style="padding-right: 0px; padding-bottom:0;" width="100%;" id="img_center"  class="img-responsive">
+					</div>
+					<div class="col-md-10 col-md-offset-1 col-md-4 col-lg-4" style="padding-left:0px;" >
+						<h6 style="line-height:1.5">Problem 3: Most competitors have client-side validation but we don't.</h3>
+						<p>Most of our competitors have client-side validation for their form filling process. Besides, users experience client-side validation for their day to day online experience, and they expect to see similar features on our platform. </p>
+						<h6 style="color:#0854A1">Hypothesis</h6>
+						<p>We can implement client-side validation on our platform, which will provide real-time guidance and increase the form filling success rate.</p>	
+					</div>
+	
+				</div>
+			</div>
+
+
+			<div style="padding-bottom: 80px;">
+				<img id="img_center" width="100%;"src="error_handling/break.png" class="img-responsive">
+			</div> 
+
+			<div class="container" id="fh5co-project">
+				<div class="row">
+					<div class="col-md-10 col-md-offset-1">
+						<h5>Design Exploration</h5>
+						<h6>Identify the design opportunities</h6>
+						<p>After synthesizing the problems and findings from the research, we identified the design opportunities lie in two major areas, the validation summary and the implementation of client-side validation.</p>
+						<img id="img_center" width="100%;"src="error_handling/flow.png" class="img-responsive">
+					</div>
+				</div>
+			</div>
+
+			<div style="padding-bottom: 80px;">
+				<img id="img_center" width="100%;"src="error_handling/exploration.png" class="img-responsive">
+			</div> 
+
+			<div class="container" id="fh5co-project">
+				<div class="row row-bottom-padded-lg" >
+					<div class="col-md-10 col-md-offset-1">
+						<h5>Design Solution</h5>
+						<h6>1. New validation summary pop-over</h6>
+						<p>The new validation summary popover located in the sticky action bar. As a result, it is always accessible as users scroll. It also provide anchor link for users to quickly navigate to the affected field. Besides, the message list gets update as users interact with the form field so that users can keep track of the fixing progress.</p>
+						<img id="img_center" width="90%;"src="error_handling/gif-2.gif" class="img-responsive">
+						<img style="padding-bottom: 80px;" id="img_center" width="80%;"src="error_handling/summary-3.png" class="img-responsive">
+					</div>
+					
+				</div>
+
+				<div class="row row-bottom-padded-lg">
+					<div class="col-md-10 col-md-offset-1">
+						<h6>2. Implementing client-side validation</h6>
+						<p>Client-side validation provides real-time feedback as users lose focus on a field, which provide more support as users filling out the form. It also make the platform feel more trustworth and intelligent.</p>
+						<img id="img_center" width="100%;"src="error_handling/client-side-validation.png" class="img-responsive">
+					</div>
+				</div>
+
+				<div class="row row-bottom-padded-lg">
+					<div class="col-md-10 col-md-offset-1">
+						<h6>3. Validation summary is confusing and not being helpful.</h6>
+						<p>A new error message style was deisnged as we introduce the new validation summary and client-side validation. The new error message located on the top of the field label to fit the various field type on the platform, such as combo-box, dropdown field. It also follows the display order in the message popover.</p>
+						<img id="img_center" width="100%;"src="error_handling/compare.png" style="padding-bottom: 80px;" class="img-responsive">
+						<img id="img_center" width="70%;"src="error_handling/style_sheet.png" class="img-responsive">
+					</div>
+				</div>
+			</div>
 
 			<div class="container" id="fh5co-project">
 				<div class="row">
 					<div class="col-md-10 col-md-offset-1 col-sm-offset-1">
-						<h3>This project is currently in progress. Contact me to learn more!</h3>
-						<div class="col-md-8">
-							<a href="mailto:yankunux@gmail.com" style="font-size: 24px" class="text-link">Shoot me an email ✉️</a>
-							<br>
-						</div>
-			</div>
+						<h3>More details will arrive.</h3>
+					</div>
 
 <!-- 						<p style="margin:0">If you have password🔑, enter it here:</p>
 						<input style="height: 2em" id="password" type="text">
